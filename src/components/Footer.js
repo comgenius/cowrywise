@@ -1,4 +1,9 @@
 import React from 'react'
+/* import styles from '../styles/style_index.module.css';
+import classLister from 'css-module-class-lister';
+
+
+const classes = classLister(styles); */
 
 const Footer = () => {
   return (

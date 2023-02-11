@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import '../styles/login.css';
+import LoginStyle from "../components/LoginStyle";
 
 const login = () => {
   return (
     <div className="container auth-area">
+      <LoginStyle/>
       <div className="grid">
         <div className="c-no-gutter c-xs-12">
         <Link to="/">

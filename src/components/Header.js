@@ -395,7 +395,7 @@ const Header = () => {
         </ul>
         <ul className="small-menu">
           <li>
-            <Link to="/signup">Sign Up</Link>
+          <Link to="/signup">Sign Up</Link>
           </li>
           <li>
             <Link to="/login">Log In</Link>

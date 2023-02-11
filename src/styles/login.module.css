@@ -1700,7 +1700,7 @@ textarea {
     padding-left: 0 !important
 }
 
-.grid.no-gutters-tbl>div[class^=c-] {
+.grid.no-gutters-tbl>div {
     padding: 0 1rem 0 0
 }
 
