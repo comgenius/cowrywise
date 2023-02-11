@@ -66,9 +66,9 @@ const Body = () => {
                       />
                       <video
                         loop="loop"
-                        playsInline="true"
+                        playsInline={true}
                         muted="muted"
-                        src="/videos/wura.mp4"
+                        src="https://cowrywise.com/videos/wura.mp4"
                         style={{ opacity: 1 }}
                       />
                     </div>
@@ -118,12 +118,12 @@ const Body = () => {
                     </div>
                     <div className="testimonial__image-overlay" />
                     <div className="testimonial__image">
-                      <img src="/images/photos/home/mayokun.jpg" />
+                      <img src="https://cowrywise.com/images/photos/home/mayokun.jpg" />
                       <video
                         loop="loop"
-                        playsInline="true"
+                        playsInline={true}
                         muted="muted"
-                        src="/videos/mayokun.mp4"
+                        src="https://cowrywise.com/videos/mayokun.mp4"
                       />
                     </div>
                   </div>
@@ -151,20 +151,20 @@ const Body = () => {
                     </div>
                     <div className="testimonial__image-overlay" />
                     <div className="testimonial__image">
-                      <img src="/images/photos/home/wande.jpg" />
-                      <video loop="loop" playsInline="true" muted="muted" />
+                      <img src="https://cowrywise.com/images/photos/home/wande.jpg" />
+                      <video loop="loop" playsInline={true} muted="muted" />
                     </div>
                   </div>
                 </div>
                 <ul className="testimonial-thumbnail-list">
                   <li className="testimonial__thumbnail active">
-                    <img src="/images/photos/home/wura.jpg" />
+                    <img src="https://cowrywise.com/images/photos/home/wura.jpg" />
                   </li>
                   <li className="testimonial__thumbnail">
-                    <img src="/images/photos/home/mayokun.jpg" />
+                    <img src="https://cowrywise.com/images/photos/home/mayokun.jpg" />
                   </li>
                   <li className="testimonial__thumbnail">
-                    <img src="/images/photos/home/wande.jpg" />
+                    <img src="https://cowrywise.com/images/photos/home/wande.jpg" />
                   </li>
                 </ul>
               </div>

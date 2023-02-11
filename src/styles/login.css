@@ -2713,7 +2713,7 @@ textarea {
 
 @font-face {
     font-family: "CW BR Firma";
-    src: url(https://my.cowrywise.com/fonts/br-firma/BRFirmaCW-Light.woff2) format("woff2");
+    src: url(../fonts/br-firma/BRFirmaCW-Light.woff2) format("woff2");
     font-weight: 300;
     font-display: fallback;
     font-style: normal
@@ -2721,7 +2721,7 @@ textarea {
 
 @font-face {
     font-family: "CW BR Firma";
-    src: url(https://my.cowrywise.com/fonts/br-firma/BRFirmaCW-Regular.woff2) format("woff2");
+    src: url(../fonts/br-firma/BRFirmaCW-Regular.woff2) format("woff2");
     font-weight: 400;
     font-display: fallback;
     font-style: normal
@@ -2729,7 +2729,7 @@ textarea {
 
 @font-face {
     font-family: "CW BR Firma";
-    src: url(https://my.cowrywise.com/fonts/br-firma/BRFirmaCW-Medium.woff2) format("woff2");
+    src: url(../fonts/br-firma/BRFirmaCW-Medium.woff2) format("woff2");
     font-weight: 500;
     font-display: fallback;
     font-style: normal
@@ -2737,7 +2737,7 @@ textarea {
 
 @font-face {
     font-family: "CW BR Firma";
-    src: url(https://my.cowrywise.com/fonts/br-firma/BRFirmaCW-SemiBold.woff2) format("woff2");
+    src: url(../fonts/br-firma/BRFirmaCW-SemiBold.woff2) format("woff2");
     font-weight: 600;
     font-display: fallback;
     font-style: normal
@@ -2745,7 +2745,7 @@ textarea {
 
 @font-face {
     font-family: "CW BR Firma";
-    src: url(https://my.cowrywise.com/fonts/br-firma/BRFirmaCW-Bold.woff2) format("woff2");
+    src: url(../fonts/br-firma/BRFirmaCW-Bold.woff2) format("woff2");
     font-weight: 700;
     font-display: fallback;
     font-style: normal
