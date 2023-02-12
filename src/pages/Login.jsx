@@ -83,7 +83,7 @@ const login = () => {
                 <div className="c-sm-6 c-no-gutter">
                   <span className="u-t-light-6">
                     New user?
-                    <a href="JavaScript:void(0);">Create account</a>
+                    <a href="JavaScript:void(0);"> Create account</a>
                   </span>
                 </div>{" "}
                 <div className="c-sm-6 c-xs-12 grid c-no-gutter end-sm">
@@ -97,7 +97,7 @@ const login = () => {
           <div className="auth-footer grid between-xs m-t-30">
             <span className="u-t-light-6">
               Trouble signing in?
-              <a href="#">Chat with us</a>
+              <a href="#"> Chat with us</a>
             </span>{" "}
             <div>
               <span>

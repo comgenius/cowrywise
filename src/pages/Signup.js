@@ -1,14 +1,18 @@
-import React from "react";
+import React, { Fragment, useRef } from "react";
 import { Link } from "react-router-dom";
 import LoginStyle from "../components/LoginStyle";
+import SliderGlide from "../components/SliderGlide";
 
-const signup = () => {
+
+const Signup = () => {
+  const gliderRef = useRef(null);
+  const carouselOptions = { type: "slide", perView: 1, startAt: 0,autoplay: 2000 };
   return (
     <div className="container auth-area">
-      <LoginStyle/>
+      <LoginStyle />
       <div className="grid">
         <div className="c-no-gutter c-xs-12">
-            <Link to="/">
+          <Link to="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               svg-inline=""
@@ -22,12 +26,12 @@ const signup = () => {
                 fill="#0066F5"
               />
             </svg>
-            </Link>
+          </Link>
         </div>
-      </div>{" "}
+      </div>
       <div className="grid">
         <div className="c-no-gutter c-md-6 c-lg-6 c-sm-12 c-xs-12">
-          <h3 className="u-font-bold">Grow wealth.</h3>{" "}
+          <h3 className="u-font-bold">Grow wealth.</h3>
           <div className="grid testimonials m-t-40 hide-xs show-md">
             <div className="c-no-gutter c-md-6 c-lg-6 c-xs-12">
               <div className="cw-trusted">
@@ -64,151 +68,112 @@ const signup = () => {
                       <rect width={16} height={16} rx={8} fill="#fff" />
                     </clipPath>
                   </defs>
-                </svg>{" "}
+                </svg>
                 <p>
                   Trusted by over
                   <span>
-                    <strong>500k users</strong>
+                    <strong> 500k users </strong>
                   </span>
                   like
                   <span>
-                    <strong>you!</strong>
+                    <strong> you!</strong>
                   </span>
                 </p>
-              </div>{" "}
-              <div
-                className="glide glide--ltr glide--slider glide--swipeable"
-                per-view={1}
-              >
-                <div data-glide-el="track" className="glide__track">
-                  <ul
-                    className="glide__slides"
-                    style={{
-                      transition:
-                        "transform 450ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s",
-                      width: 1210,
-                      transform: "translate3d(-305px, 0px, 0px)",
-                    }}
-                  >
-                    <li
-                      data-glide-index={0}
-                      className="glide__slide glide__slide--active"
-                      style={{ width: 295, marginRight: 5 }}
-                    >
-                      <div className="testimonial">
-                        <div className="testimonial__msg">
-                          <p>
-                            “I learnt how to budget and stick to it. I learnt
-                            how to spend within my means.”
-                          </p>
-                        </div>{" "}
-                        <div className="testimonial__info">
-                          <div className="testimonial__info-img">
-                            <img
-                              loading="lazy"
-                              src="https://my.cowrywise.com/_nuxt/img/shaba.61d24b3.jpeg"
-                              alt="Shaba Shalom"
-                            />
-                          </div>{" "}
-                          <div className="testimonial__info-name">
-                            <h3>Shaba Shalom</h3>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li
-                      data-glide-index={1}
-                      className="glide__slide"
-                      style={{ width: 295, marginLeft: 5, marginRight: 5 }}
-                    >
-                      <div className="testimonial">
-                        <div className="testimonial__msg">
-                          <p>
-                            “My friend and I challenged ourselves to save for
-                            our needed vacation using Cowrywise!”
-                          </p>
-                        </div>{" "}
-                        <div className="testimonial__info">
-                          <div className="testimonial__info-img">
-                            <img
-                              loading="lazy"
-                              src="https://my.cowrywise.com/_nuxt/img/dami.c817360.jpeg"
-                              alt="Adegamigbe Damilola"
-                            />
-                          </div>{" "}
-                          <div className="testimonial__info-name">
-                            <h3>Adegamigbe Damilola</h3>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li
-                      data-glide-index={2}
-                      className="glide__slide"
-                      style={{ width: 295, marginLeft: 5, marginRight: 5 }}
-                    >
-                      <div className="testimonial">
-                        <div className="testimonial__msg">
-                          <p>
-                            “I achieved my personal savings goal by joining a
-                            savings circle with my friends on Cowrywise.”
-                          </p>
-                        </div>{" "}
-                        <div className="testimonial__info">
-                          <div className="testimonial__info-img">
-                            <img
-                              loading="lazy"
-                              src="https://my.cowrywise.com/_nuxt/img/juwonlo.5590496.jpg"
-                              alt="Juwonlo Oloyede"
-                            />
-                          </div>{" "}
-                          <div className="testimonial__info-name">
-                            <h3>Juwonlo Oloyede</h3>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li
-                      data-glide-index={3}
-                      className="glide__slide"
-                      style={{ width: 295, marginLeft: 5 }}
-                    >
-                      <div className="testimonial">
-                        <div className="testimonial__msg">
-                          <p>
-                            “I set and surpassed my one million savings goal in
-                            a pandemic year! Thanks to Cowrywise.”
-                          </p>
-                        </div>{" "}
-                        <div className="testimonial__info">
-                          <div className="testimonial__info-img">
-                            <img
-                              loading="lazy"
-                              src="https://my.cowrywise.com/_nuxt/img/ola.62b6f96.jpeg"
-                              alt="Emmanuel Olatunji"
-                            />
-                          </div>{" "}
-                          <div className="testimonial__info-name">
-                            <h3>Emmanuel Olatunji</h3>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div data-glide-el="controls[nav]" className="glide__bullets">
-                  <button
-                    data-glide-dir="=0"
-                    className="glide__bullet glide__bullet--active"
-                  />
-                  <button data-glide-dir="=1" className="glide__bullet" />
-                  <button data-glide-dir="=2" className="glide__bullet" />
-                  <button data-glide-dir="=3" className="glide__bullet" />
-                </div>
               </div>
+
+              <SliderGlide options={carouselOptions}>
+                <li className="glide__slide">
+                  <div className="testimonial">
+                    <div className="testimonial__msg">
+                      <p>
+                        “I learnt how to budget and stick to it. I learnt how to
+                        spend within my means.”
+                      </p>
+                    </div>
+                    <div className="testimonial__info">
+                      <div className="testimonial__info-img">
+                        <img
+                          loading="lazy"
+                          src="https://my.cowrywise.com/_nuxt/img/shaba.61d24b3.jpeg"
+                          alt="Shaba Shalom"
+                        />
+                      </div>
+                      <div className="testimonial__info-name">
+                        <h3>Shaba Shalom</h3>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li className="glide__slide">
+                  <div className="testimonial">
+                    <div className="testimonial__msg">
+                      <p>
+                        “My friend and I challenged ourselves to save for our
+                        needed vacation using Cowrywise!”
+                      </p>
+                    </div>
+                    <div className="testimonial__info">
+                      <div className="testimonial__info-img">
+                        <img
+                          loading="lazy"
+                          src="https://my.cowrywise.com/_nuxt/img/dami.c817360.jpeg"
+                          alt="Adegamigbe Damilola"
+                        />
+                      </div>
+                      <div className="testimonial__info-name">
+                        <h3>Adegamigbe Damilola</h3>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li className="glide__slide">
+                  <div className="testimonial">
+                    <div className="testimonial__msg">
+                      <p>
+                        “I achieved my personal savings goal by joining a
+                        savings circle with my friends on Cowrywise.”
+                      </p>
+                    </div>
+                    <div className="testimonial__info">
+                      <div className="testimonial__info-img">
+                        <img
+                          loading="lazy"
+                          src="https://my.cowrywise.com/_nuxt/img/juwonlo.5590496.jpg"
+                          alt="Juwonlo Oloyede"
+                        />
+                      </div>
+                      <div className="testimonial__info-name">
+                        <h3>Juwonlo Oloyede</h3>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li className="glide__slide">
+                  <div className="testimonial">
+                    <div className="testimonial__msg">
+                      <p>
+                        “I set and surpassed my one million savings goal in a
+                        pandemic year! Thanks to Cowrywise.”
+                      </p>
+                    </div>
+                    <div className="testimonial__info">
+                      <div className="testimonial__info-img">
+                        <img
+                          loading="lazy"
+                          src="https://my.cowrywise.com/_nuxt/img/ola.62b6f96.jpeg"
+                          alt="Emmanuel Olatunji"
+                        />
+                      </div>
+                      <div className="testimonial__info-name">
+                        <h3>Emmanuel Olatunji</h3>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </SliderGlide>
             </div>
           </div>
-        </div>{" "}
+        </div>
         <div className="c-sm-12 c-md-6 c-no-gutter c-xs-12">
           <div className="auth-box">
             <form action="">
@@ -220,21 +185,21 @@ const signup = () => {
                       name="email"
                       placeholder="Email Address"
                       className=""
-                    />{" "}
-                    <span className="input-field__helper">Email Address</span>{" "}
-                    {/**/} {/**/}
+                    />
+                    <span className="input-field__helper">Email Address</span>
                   </div>
                 </div>
-              </div>{" "}
+              </div>
               <div className="grid middle-sm m-t-20">
                 <div className="c-sm-6 c-no-gutter">
                   <span className="u-t-light-6">
                     Got an account?
                     <a href="/login" className="">
+                      {" "}
                       Sign In
                     </a>
                   </span>
-                </div>{" "}
+                </div>
                 <div className="c-sm-6 c-xs-12 grid c-no-gutter end-sm">
                   <button type="submit" className="align-end">
                     Continue
@@ -242,15 +207,18 @@ const signup = () => {
                 </div>
               </div>
             </form>
-          </div>{" "}
+          </div>
           <div className="auth-footer grid between-xs m-t-30">
             <div className="sec-license">
-              <img src="https://my.cowrywise.com/_nuxt/img/sec-logo.4c2737a.png" alt="SEC" />{" "}
+              <img
+                src="https://my.cowrywise.com/_nuxt/img/sec-logo.4c2737a.png"
+                alt="SEC"
+              />
               <span>Licensed by the SEC</span>
-            </div>{" "}
+            </div>
             <span className="u-t-light-6">
               Need Help?
-              <a href="mailto:support@my.cowrywise.com">Contact Support</a>
+              <a href="mailto:support@my.cowrywise.com"> Contact Support</a>
             </span>
           </div>
         </div>
@@ -259,4 +227,4 @@ const signup = () => {
   );
 };
 
-export default signup;
+export default Signup;

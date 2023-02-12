@@ -3,24 +3,56 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false);
-  const buttonRef = useRef(null);
+  const [isActive1, setIsActive1] = useState(false);
+  const [isActive2, setIsActive2] = useState(false);
+  const [isActive3, setIsActive3] = useState(false);
+  const [isActive4, setIsActive4] = useState(false);
 
-  const handleButtonClick = () => {
-    console.log("emma");
-    setShowDropdown(!showDropdown);
-  }
+  const dropdown1Ref = useRef(null);
+  const dropdown2Ref = useRef(null);
+  const dropdown3Ref = useRef(null);
+  const dropdown4Ref = useRef(null);
 
-  const handleClickOutside = (event) => {
-    if (buttonRef.current && !buttonRef.current.contains(event.target)) {
-      setShowDropdown(false);
+  const handleButtonClick1 = () => setIsActive1(!isActive1);
+  const handleButtonClick2 = () => setIsActive2(!isActive2);
+  const handleButtonClick3 = () => setIsActive3(!isActive3);
+  const handleButtonClick4 = () => setIsActive4(!isActive4);
+
+  const handleOutsideClick1 = (event) => {
+    if (dropdown1Ref.current && !dropdown1Ref.current.contains(event.target)) {
+      setIsActive1(false);
     }
-  }
+  };
+
+  const handleOutsideClick2 = (event) => {
+    console.log(dropdown2Ref.current);
+    if (dropdown2Ref.current && !dropdown2Ref.current.contains(event.target)) {
+      setIsActive2(false);
+    }
+  };
+
+  const handleOutsideClick3 = (event) => {
+    if (dropdown3Ref.current && !dropdown3Ref.current.contains(event.target)) {
+      setIsActive3(false);
+    }
+  };
+
+  const handleOutsideClick4 = (event) => {
+    if (dropdown4Ref.current && !dropdown4Ref.current.contains(event.target)) {
+      setIsActive4(false);
+    }
+  };
 
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('mousedown', handleOutsideClick1);
+    document.addEventListener('mousedown', handleOutsideClick2);
+    document.addEventListener('mousedown', handleOutsideClick3);
+    document.addEventListener('mousedown', handleOutsideClick4);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('mousedown', handleOutsideClick1);
+      document.removeEventListener('mousedown', handleOutsideClick2);
+      document.removeEventListener('mousedown', handleOutsideClick3);
+      document.removeEventListener('mousedown', handleOutsideClick4);
     };
   }, []);
 
@@ -42,7 +74,7 @@ const Header = () => {
       <div className="global-mobile-nav__menu">
         <ul className="parent-list">
           <li>
-            <button className={`has-dropdown hi ${showDropdown  ? 'active' : ''}`}  onClick={handleButtonClick}>
+            <button className="">
               Personal
               <svg
                 width={17}
@@ -244,7 +276,7 @@ const Header = () => {
             </div>
           </li>
           <li>
-            <button class="has-dropdown">
+            <button className="">
               Business
               <svg
                 width={17}
@@ -315,7 +347,7 @@ const Header = () => {
             </div>
           </li>
           <li>
-            <button class="has-dropdown">
+            <button className="">
               Developer
               <svg
                 width={17}
@@ -513,9 +545,9 @@ const Header = () => {
           <div className="global-nav__menu">
             <ul className="global-nav__list">
               <li>
-                <button className={`has-dropdown ${showDropdown  ? 'active' : ''}`}  onClick={handleButtonClick}>
+                <button className={`has-dropdown hi ${isActive1  ? 'active' : ''}`} ref={dropdown1Ref}  onClick={handleButtonClick1}>
                   Personal
-                  <div className={`nav__dropdown ${showDropdown  ? 'active' : ''}`}>
+                  <div className={`nav__dropdown ${isActive1  ? 'active' : ''}`} >
                     <div className="nav__dropdown-left">
                       <ul>
                         <li>
@@ -709,9 +741,9 @@ const Header = () => {
                     </div>
                   </div>
                 </button>
-                <button className="has-dropdown">
+                <button className={`has-dropdown hi ${isActive2  ? 'active' : ''}`} ref={dropdown2Ref}  onClick={handleButtonClick2}>
                   Business
-                  <div className="nav__dropdown no-border">
+                  <div className={`nav__dropdown   ${isActive2  ? 'active' : ''}`}>
                     <div className="nav__dropdown-left">
                       <ul>
                         <li>
@@ -767,9 +799,9 @@ const Header = () => {
                     </div>
                   </div>
                 </button>
-                <button className="has-dropdown">
+                <button className={`has-dropdown hi ${isActive3  ? 'active' : ''}`} ref={dropdown3Ref}  onClick={handleButtonClick3}>
                   Developer
-                  <div className="nav__dropdown">
+                  <div className={`nav__dropdown ${isActive3  ? 'active' : ''}`}>
                     <div className="nav__dropdown-left">
                       <ul>
                         <li>

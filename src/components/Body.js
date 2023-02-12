@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { CSSTransition } from 'react-transition-group';
+import React, { useState, useRef } from "react";
+import { Transition } from 'react-transition-group';
 
 const Body = () => {
   const [thumbnailIndex, setThumbnailIndex] = useState(0);
@@ -9,6 +9,8 @@ const Body = () => {
   const handleThumbnailItemClick = (index) => {
     setThumbnailIndex(index);
   }
+
+  
 
   return (
     <div className="page-root" style={{ overflow: "hidden" }}>
