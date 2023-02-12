@@ -1,8 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const buttonRef = useRef(null);
+
+  const handleButtonClick = () => {
+    console.log("emma");
+    setShowDropdown(!showDropdown);
+  }
+
+  const handleClickOutside = (event) => {
+    if (buttonRef.current && !buttonRef.current.contains(event.target)) {
+      setShowDropdown(false);
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   useEffect(() => {
     function handleScroll() {
@@ -22,7 +42,7 @@ const Header = () => {
       <div className="global-mobile-nav__menu">
         <ul className="parent-list">
           <li>
-            <button>
+            <button className={`has-dropdown hi ${showDropdown  ? 'active' : ''}`}  onClick={handleButtonClick}>
               Personal
               <svg
                 width={17}
@@ -224,7 +244,7 @@ const Header = () => {
             </div>
           </li>
           <li>
-            <button>
+            <button class="has-dropdown">
               Business
               <svg
                 width={17}
@@ -295,7 +315,7 @@ const Header = () => {
             </div>
           </li>
           <li>
-            <button>
+            <button class="has-dropdown">
               Developer
               <svg
                 width={17}
@@ -493,9 +513,9 @@ const Header = () => {
           <div className="global-nav__menu">
             <ul className="global-nav__list">
               <li>
-                <button className="has-dropdown">
+                <button className={`has-dropdown ${showDropdown  ? 'active' : ''}`}  onClick={handleButtonClick}>
                   Personal
-                  <div className="nav__dropdown">
+                  <div className={`nav__dropdown ${showDropdown  ? 'active' : ''}`}>
                     <div className="nav__dropdown-left">
                       <ul>
                         <li>

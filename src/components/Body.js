@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import { CSSTransition } from 'react-transition-group';
 
 const Body = () => {
+  const [thumbnailIndex, setThumbnailIndex] = useState(0);
+  const [heroHomePage, setHeroHomePage] = useState(false);
+
+
+  const handleThumbnailItemClick = (index) => {
+    setThumbnailIndex(index);
+  }
+
   return (
     <div className="page-root" style={{ overflow: "hidden" }}>
       <div>
@@ -9,7 +18,7 @@ const Body = () => {
             <div className="hero-container">
               <div className="testimonials-area" style={{ opacity: 1 }}>
                 <div className="testimonials">
-                  <div className="testimonial testimonial--active">
+                  <div className={`testimonial ${thumbnailIndex === 0 ? 'testimonial--active' : ''}`}>
                     <div
                       className="testimonial__backdrop"
                       style={{
@@ -73,7 +82,7 @@ const Body = () => {
                       />
                     </div>
                   </div>
-                  <div className="testimonial">
+                  <div className={`testimonial ${thumbnailIndex === 1 ? 'testimonial--active' : ''}`}>
                     <div
                       className="testimonial__backdrop"
                       style={{ backgroundColor: "#E7FFE7" }}
@@ -127,7 +136,7 @@ const Body = () => {
                       />
                     </div>
                   </div>
-                  <div className="testimonial">
+                  <div className={`testimonial ${thumbnailIndex === 2 ? 'testimonial--active' : ''}`}>
                     <div
                       className="testimonial__backdrop"
                       style={{ backgroundColor: "#DFFAFF" }}
@@ -157,13 +166,13 @@ const Body = () => {
                   </div>
                 </div>
                 <ul className="testimonial-thumbnail-list">
-                  <li className="testimonial__thumbnail active">
+                  <li className={`testimonial__thumbnail ${thumbnailIndex === 0 ? 'active' : ''}`} onClick={() => handleThumbnailItemClick(0)}>
                     <img src="https://cowrywise.com/images/photos/home/wura.jpg" />
                   </li>
-                  <li className="testimonial__thumbnail">
+                  <li className={`testimonial__thumbnail ${thumbnailIndex === 1 ? 'active' : ''}`} onClick={() => handleThumbnailItemClick(1)}>
                     <img src="https://cowrywise.com/images/photos/home/mayokun.jpg" />
                   </li>
-                  <li className="testimonial__thumbnail">
+                  <li className={`testimonial__thumbnail ${thumbnailIndex === 2 ? 'active' : ''}`} onClick={() => handleThumbnailItemClick(2)}>
                     <img src="https://cowrywise.com/images/photos/home/wande.jpg" />
                   </li>
                 </ul>
