@@ -14786,3 +14786,13 @@ section.story-section .story__content.halal__content h4 {
     direction: rtl
 }
 
+.scale-up-ver-center{-webkit-animation:scale-up-ver-center .4s cubic-bezier(.39,.575,.565,1.000) both;animation:scale-up-ver-center .4s cubic-bezier(.39,.575,.565,1.000) both}
+
+ @-webkit-keyframes scale-up-ver-center{0%{-webkit-transform:scaleY(.4);transform:scaleY(.4)}100%{-webkit-transform:scaleY(1);transform:scaleY(1)}}@keyframes scale-up-ver-center{0%{-webkit-transform:scaleY(.4);transform:scaleY(.4)}100%{-webkit-transform:scaleY(1);transform:scaleY(1)}}
+
+ .scale-up-center{-webkit-animation:scale-up-center .6s cubic-bezier(.39,.575,.565,1.000) both;animation:scale-up-center .6s cubic-bezier(.39,.575,.565,1.000) both}
+@-webkit-keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}
+
+.scale-up-ver-bottom{-webkit-animation:scale-up-ver-bottom 1s cubic-bezier(.39,.575,.565,1.000) both;animation:scale-up-ver-bottom 1s cubic-bezier(.39,.575,.565,1.000) both}
+ @-webkit-keyframes scale-up-ver-bottom{0%{-webkit-transform:scaleY(.4);transform:scaleY(.4);-webkit-transform-origin:0 100%;transform-origin:0 100%}100%{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transform-origin:0 100%;transform-origin:0 100%}}@keyframes scale-up-ver-bottom{0%{-webkit-transform:scaleY(.4);transform:scaleY(.4);-webkit-transform-origin:0 100%;transform-origin:0 100%}100%{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transform-origin:0 100%;transform-origin:0 100%}}
+

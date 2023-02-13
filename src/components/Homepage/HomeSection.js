@@ -14,13 +14,9 @@ const HomeSection = () => {
             <div className="hero-container">
               <div className="testimonials-area" style={{ opacity: 1 }}>
                 <div className="testimonials">
-                  <div className={`testimonial ${thumbnailIndex === 0 ? 'testimonial--active animate__animated animate__zoomIn' : ''}`}>
+                  <div className={`testimonial ${thumbnailIndex === 0 ? 'testimonial--active ' : ''}`}>
                     <div
-                      className="testimonial__backdrop"
-                      style={{
-                        backgroundColor: "rgb(255, 236, 219)",
-                        height: 850,
-                      }}
+                      className={`testimonial__backdrop ${thumbnailIndex === 0 ? 'scale-up-ver-center ' : ''}`}
                     />
                     <div className="testimonial__video-controls">
                       <svg
@@ -58,13 +54,13 @@ const HomeSection = () => {
                       </blockquote>
                       <div className="testimonial__author">
                         <span>Wuraola F</span>
-                        <a href="https://cowrywise.com/@wuwu" target="_blank">
+                        <a href="#">
                           @wuwu
                         </a>
                       </div>
                     </div>
-                    <div className="testimonial__image-overlay" />
-                    <div className="testimonial__image" style={{ height: 650 }}>
+                    <div className="testimonial__image-overlay " />
+                    <div className={`testimonial__image ${thumbnailIndex === 0 ? 'scale-up-center ' : ''}`}>
                       <img
                         src="https://cowrywise.com/images/photos/home/wura.jpg"
                         style={{ transform: "translate(0px, 0px)" }}
@@ -78,9 +74,9 @@ const HomeSection = () => {
                       />
                     </div>
                   </div>
-                  <div className={`testimonial ${thumbnailIndex === 1 ? 'testimonial--active animate__animated animate__zoomIn' : ''}`}>
+                  <div className={`testimonial ${thumbnailIndex === 1 ? 'testimonial--active ' : ''}`}>
                     <div
-                      className="testimonial__backdrop"
+                      className={`testimonial__backdrop ${thumbnailIndex === 1 ? 'scale-up-ver-center ' : ''}`}
                       style={{ backgroundColor: "#E7FFE7" }}
                     />
                     <div className="testimonial__video-controls">
@@ -116,13 +112,13 @@ const HomeSection = () => {
                       </blockquote>
                       <div className="testimonial__author">
                         <span>Mayokun A</span>
-                        <a href="https://cowrywise.com/@mhay" target="_blank">
+                        <a href="#">
                           @mhay
                         </a>
                       </div>
                     </div>
                     <div className="testimonial__image-overlay" />
-                    <div className="testimonial__image">
+                    <div className={`testimonial__image ${thumbnailIndex === 1 ? 'scale-up-center ' : ''}`}>
                       <img src="https://cowrywise.com/images/photos/home/mayokun.jpg" />
                       <video
                         loop="loop"
@@ -132,9 +128,9 @@ const HomeSection = () => {
                       />
                     </div>
                   </div>
-                  <div className={`testimonial ${thumbnailIndex === 2 ? 'testimonial--active animate__animated animate__zoomIn' : ''}`}>
+                  <div className={`testimonial ${thumbnailIndex === 2 ? 'testimonial--active ' : ''}`}>
                     <div
-                      className="testimonial__backdrop"
+                      className={`testimonial__backdrop ${thumbnailIndex === 2 ? 'scale-up-ver-center ' : ''}`}
                       style={{ backgroundColor: "#DFFAFF" }}
                     />
                     {/**/}
@@ -147,15 +143,14 @@ const HomeSection = () => {
                       <div className="testimonial__author">
                         <span>Olaitan O</span>
                         <a
-                          href="https://cowrywise.com/@thevideopilot"
-                          target="_blank"
+                          href="#"
                         >
                           @thevideopilot
                         </a>
                       </div>
                     </div>
                     <div className="testimonial__image-overlay" />
-                    <div className="testimonial__image">
+                    <div className={`testimonial__image ${thumbnailIndex === 2 ? 'scale-up-center ' : ''}`}>
                       <img src="https://cowrywise.com/images/photos/home/wande.jpg" />
                       <video loop="loop" playsInline={true} muted="muted" />
                     </div>

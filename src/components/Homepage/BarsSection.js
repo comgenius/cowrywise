@@ -2,62 +2,51 @@ import React, { useState, useEffect, useRef } from 'react'
 import 'animate.css';
 
 const BarsSection = () => {
-  const elementRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const [onScroll, setScroll] = useState(false);
-  const [div1Visible, setDiv1Visible] = useState(false);
-  const [div2Visible, setDiv2Visible] = useState(false);
-  const [div3Visible, setDiv3Visible] = useState(false);
-  const [div4Visible, setDiv4Visible] = useState(false);
-  const [div5Visible, setDiv5Visible] = useState(false);
-  const [div6Visible, setDiv6Visible] = useState(false);
+  const element1Ref = useRef(null);
+  const element2Ref = useRef(null);
+  const element3Ref = useRef(null);
+  const element4Ref = useRef(null);
+  const element5Ref = useRef(null);
+  const element6Ref = useRef(null);
 
   useEffect(() => {
-      document.title = 'Kuda | The Money App for Africans | Open an Account in Minutes';
-      setIsVisible(true);
-    }, []);
+    // Check if the element is in view
+    const isInView = (ref) => {
+      const rect = ref.current.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+      );
+    }
 
-    useEffect(() => {
-      const handleScroll = () => {
-        const div1 = document.querySelector('.div1Visible');
-        const div2 = document.querySelector('.div2Visible');
-        const div3 = document.querySelector('.div3Visible');
-        const div4 = document.querySelector('.div4Visible');
-        const div5 = document.querySelector('.div5Visible');
-        const div6 = document.querySelector('.div6Visible');
-  
-        const div1Top = div1.getBoundingClientRect().top;
-        const div2Top = div2.getBoundingClientRect().top;
-        const div3Top = div3.getBoundingClientRect().top;
-        const div4Top = div4.getBoundingClientRect().top;
-        const div5Top = div5.getBoundingClientRect().top;
-        const div6Top = div6.getBoundingClientRect().top;
-  
-        const windowHeight = window.innerHeight;
-  
-        if (!div1Visible && div1Top < windowHeight) {
-          setDiv1Visible(true);
-        }
-        if (!div2Visible && div2Top < windowHeight) {
-          setDiv2Visible(true);
-        }
-        if (!div3Visible && div3Top < windowHeight) {
-          setDiv3Visible(true);
-        }
-        if (!div4Visible && div4Top < windowHeight) {
-          setDiv4Visible(true);
-        }
-        if (!div5Visible && div5Top < windowHeight) {
-          setDiv5Visible(true);
-        }
-        if (!div6Visible && div6Top < windowHeight) {
-          setDiv6Visible(true);
-        }
-      };
-  
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-    }, [div1Visible, div2Visible, div3Visible, div4Visible, div5Visible, div6Visible]);  
+    // Add or remove class based on whether the element is in view
+    const handleScroll = () => {
+      if (isInView(element1Ref)) {
+        element1Ref.current.classList.add('animate__animated', 'animate__slideInUp');
+      }
+      if (isInView(element2Ref)) {
+        element2Ref.current.classList.add('animate__animated', 'animate__slideInDown');
+      }
+      if (isInView(element5Ref)) {
+        element5Ref.current.classList.add('animate__animated', 'animate__slideInDown');
+      }
+      if (isInView(element6Ref)) {
+        element6Ref.current.classList.add('animate__animated', 'animate__slideInDown');
+      }
+      if (isInView(element3Ref)) {
+        element3Ref.current.classList.add('scale-up-ver-bottom');
+      }
+      if (isInView(element4Ref)) {
+        element4Ref.current.classList.add('animate__animated', 'animate__slideInUp');
+      }
+    }
+
+    // Attach scroll event listener to window
+    window.addEventListener('scroll', handleScroll);
+
+    // Remove scroll event listener when component unmounts
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);  
   return (
     <section className="bars-section">
           <div className="container">
@@ -67,9 +56,7 @@ const BarsSection = () => {
                   className="xl"
                 >
                   Get a
-                  <span className={`${div1Visible ? 'animate__animated animate__fadeInUp' : ''}`}>
-                    little
-                  </span>
+                  <span ref={element1Ref}> little </span>
                   &nbsp; richer each day
                 </h2>
                 <h5>
@@ -79,19 +66,20 @@ const BarsSection = () => {
                   Start your financial journey
                 </a>
               </div>
-              <div className="bars-section__animation">
-                <div id="bars-animation-container">
+              <div className="bars-section__animation" >
+                <div id="bars-animation-container" ref={element3Ref}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1270 1360"
                     width={1270}
                     height={1360}
                     preserveAspectRatio="xMidYMid meet"
+                    ref={element3Ref}
                     style={{
                       width: "100%",
                       height: "100%",
-                      transform: "translate3d(0px, 0px, 0px)",
                     }}
+                    className="scale-up-ver-bottom"
                   >
                     <defs>
                       <clipPath id="__lottie_element_2">
@@ -211,7 +199,7 @@ const BarsSection = () => {
                   </svg>
                 </div>
                 <div
-                  className="point-item-1 point-item"
+                  className="point-item-1 point-item" ref={element2Ref}
                 >
                   <div className="point-item-card">
                     <h6>Build your savings</h6>
@@ -222,7 +210,7 @@ const BarsSection = () => {
                   </div>
                 </div>
                 <div
-                  className="point-item-2 point-item"
+                  className="point-item-2 point-item" ref={element5Ref}
                 >
                   <div className="point-item-card">
                     <h6>Invest deliberately</h6>
@@ -233,7 +221,7 @@ const BarsSection = () => {
                   </div>
                 </div>
                 <div
-                  className="point-item-3 point-item"
+                  className="point-item-3 point-item" ref={element6Ref}
                 >
                   <div className="point-item-card">
                     <h6>Stay rich ✨</h6>

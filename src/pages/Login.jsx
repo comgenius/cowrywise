@@ -83,7 +83,7 @@ const login = () => {
                 <div className="c-sm-6 c-no-gutter">
                   <span className="u-t-light-6">
                     New user?
-                    <a href="JavaScript:void(0);"> Create account</a>
+                    <Link to="/signup"> Create account</Link>
                   </span>
                 </div>{" "}
                 <div className="c-sm-6 c-xs-12 grid c-no-gutter end-sm">
