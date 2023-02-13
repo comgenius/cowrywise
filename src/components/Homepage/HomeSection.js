@@ -2,7 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 
 const HomeSection = () => {
   const [thumbnailIndex, setThumbnailIndex] = useState(0);
-  const [heroHomePage, setHeroHomePage] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowVideo(!showVideo);
+  };
 
 
   const handleThumbnailItemClick = (index) => {
@@ -59,18 +63,13 @@ const HomeSection = () => {
                         </a>
                       </div>
                     </div>
-                    <div className="testimonial__image-overlay " />
                     <div className={`testimonial__image ${thumbnailIndex === 0 ? 'scale-up-center ' : ''}`}>
+                    <video loop="loop" playsInline={true} muted="muted" controls onEnded={() => setShowVideo(false)}>
+                      <source src="https://cowrywise.com/videos/wura.mp4" type="video/mp4" />
+                    </video>
                       <img
                         src="https://cowrywise.com/images/photos/home/wura.jpg"
                         style={{ transform: "translate(0px, 0px)" }}
-                      />
-                      <video
-                        loop="loop"
-                        playsInline={true}
-                        muted="muted"
-                        src="https://cowrywise.com/videos/wura.mp4"
-                        style={{ opacity: 1 }}
                       />
                     </div>
                   </div>
@@ -117,7 +116,6 @@ const HomeSection = () => {
                         </a>
                       </div>
                     </div>
-                    <div className="testimonial__image-overlay" />
                     <div className={`testimonial__image ${thumbnailIndex === 1 ? 'scale-up-center ' : ''}`}>
                       <img src="https://cowrywise.com/images/photos/home/mayokun.jpg" />
                       <video
@@ -149,7 +147,6 @@ const HomeSection = () => {
                         </a>
                       </div>
                     </div>
-                    <div className="testimonial__image-overlay" />
                     <div className={`testimonial__image ${thumbnailIndex === 2 ? 'scale-up-center ' : ''}`}>
                       <img src="https://cowrywise.com/images/photos/home/wande.jpg" />
                       <video loop="loop" playsInline={true} muted="muted" />
