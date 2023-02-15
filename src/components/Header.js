@@ -451,10 +451,10 @@ const Header = () => {
       </div>
       <div className="container">
         <div className="global-nav__row">
-          <a href="#" className="cw-logo">
+          <a href="/cowrywise" className="cw-logo">
             <CowrywiseLogoBlue/>
           </a>
-          <a href="#" className="cw-logo light">
+          <a href="/cowrywise" className="cw-logo light">
             <CowrywiseLogoWhite/>
           </a>
           <div className="global-nav__menu">

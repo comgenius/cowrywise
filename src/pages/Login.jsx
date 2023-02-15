@@ -8,7 +8,7 @@ const login = () => {
       <LoginStyle/>
       <div className="grid">
         <div className="c-no-gutter c-xs-12">
-        <Link to="/">
+        <Link to="/cowrywise">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               svg-inline=""
@@ -24,12 +24,12 @@ const login = () => {
             </svg>
           </Link>
         </div>
-      </div>{" "}
+      </div>
       <div data-testid="login-page" className="grid">
         <div className="c-no-gutter c-md-6 c-sm-12 c-xs-12">
-          <h3 className="u-font-bold">Jump right back in</h3>{" "}
+          <h3 className="u-font-bold">Jump right back in</h3>
           <h5 className="u-t-light-3 u-font-bold">Sign in to continue</h5>
-        </div>{" "}
+        </div>
         <div className="c-sm-12 c-md-6 c-no-gutter c-xs-12">
           <div className="auth-box">
             <form action="">
@@ -43,9 +43,9 @@ const login = () => {
                   placeholder="Email Address"
                   title="Email is required"
                   className=""
-                />{" "}
+                />
                 <span className="input-field__helper">Email Address</span>
-              </div>{" "}
+              </div>
               <div className="input-field__wrapper">
                 <input
                   data-testid="password-input"
@@ -55,8 +55,8 @@ const login = () => {
                   title="Password is required"
                   type="password"
                   className=""
-                />{" "}
-                <span className="input-field__helper">Password</span>{" "}
+                />
+                <span className="input-field__helper">Password</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -69,23 +69,23 @@ const login = () => {
                   className="password-visibility"
                 >
                   <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
-                </svg>{" "}
-                {/**/}{" "}
+                </svg>
+                
                 <div className="m-t-15">
                   <span>
-                    <a href="/forgot-password" className="">
+                    <a href="#" className="">
                       Forgot password?
                     </a>
                   </span>
                 </div>
-              </div>{" "}
+              </div>
               <div className="grid middle-sm">
                 <div className="c-sm-6 c-no-gutter">
                   <span className="u-t-light-6">
                     New user?
                     <Link to="/signup"> Create account</Link>
                   </span>
-                </div>{" "}
+                </div>
                 <div className="c-sm-6 c-xs-12 grid c-no-gutter end-sm">
                   <button type="submit" className="align-end">
                     Sign In
@@ -93,50 +93,50 @@ const login = () => {
                 </div>
               </div>
             </form>
-          </div>{" "}
+          </div>
           <div className="auth-footer grid between-xs m-t-30">
             <span className="u-t-light-6">
               Trouble signing in?
               <a href="#"> Chat with us</a>
-            </span>{" "}
+            </span>
             <div>
               <span>
                 <a href="https://cowrywise.com/privacy" className="u-t-light-3">
                   &nbsp; Privacy &nbsp; |
                 </a>
-              </span>{" "}
+              </span>
               <span>
                 <a href="https://cowrywise.com/terms" className="u-t-light-3">
                   &nbsp; Terms
                 </a>
               </span>
             </div>
-          </div>{" "}
+          </div>
           <div
             className="sweet-modal--small sweet-modal-overlay theme-dark sweet-modal-clickable"
             style={{ display: "none" }}
           >
             <div className="sweet-modal theme-light has-content is-mobile-fullscreen is-alert">
-              <div className="sweet-box-actions"> {/**/}</div> {/**/} {/**/}{" "}
+              <div className="sweet-box-actions"> </div>  
               <div className="sweet-content">
-                {/**/} {/**/} {/**/} {/**/}{" "}
+                   
                 <div className="sweet-content-content">
                   <div className="confirmation-modal">
                     <div className="m-b-30">
-                      <h5>Reactivate your account</h5>{" "}
+                      <h5>Reactivate your account</h5>
                       <p className="m-t-15 u-t-light-6">
                         You made a request to delete this account. Logging in
                         means you want to cancel that request.
-                      </p>{" "}
-                      {/**/}{" "}
-                    </div>{" "}
+                      </p>
+                      
+                    </div>
                     <div className="grid end-xs u-t-right">
                       <button
                         type="button"
                         className="button button--no-height button--text m-r-20 primary"
                       >
                         go back
-                      </button>{" "}
+                      </button>
                       <button
                         type="button"
                         className="button button--no-height button--text"
@@ -146,8 +146,8 @@ const login = () => {
                     </div>
                   </div>
                 </div>
-              </div>{" "}
-              {/**/}
+              </div>
+              
             </div>
           </div>
         </div>

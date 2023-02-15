@@ -20,7 +20,7 @@ const HomeSection = () => {
                 <div className="testimonials">
                   <div className={`testimonial ${thumbnailIndex === 0 ? 'testimonial--active ' : ''}`}>
                     <div
-                      className={`testimonial__backdrop ${thumbnailIndex === 0 ? 'scale-up-ver-center ' : ''}`}
+                      className={`testimonial__backdrop ${thumbnailIndex === 0 ? 'scale-up-ver-center' : ''}`}
                     />
                     <div className="testimonial__video-controls">
                       <svg

@@ -12,7 +12,7 @@ const Signup = () => {
       <LoginStyle />
       <div className="grid">
         <div className="c-no-gutter c-xs-12">
-          <Link to="/">
+          <Link to="/cowrywise">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               svg-inline=""
