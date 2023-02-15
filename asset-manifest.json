@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cowrywise/static/css/main.20121d0a.css",
-    "main.js": "/cowrywise/static/js/main.d30be642.js",
+    "main.css": "/cowrywise/static/css/main.29eb5265.css",
+    "main.js": "/cowrywise/static/js/main.be9eaf43.js",
     "static/js/787.29363c83.chunk.js": "/cowrywise/static/js/787.29363c83.chunk.js",
     "static/media/BRFirmaCW-Light.woff2": "/cowrywise/static/media/BRFirmaCW-Light.ca057ce191881d346f9c.woff2",
     "static/media/BRFirmaCW-Medium.woff2": "/cowrywise/static/media/BRFirmaCW-Medium.de61284c82aee70e1d8e.woff2",
@@ -10,12 +10,12 @@
     "static/media/BRFirmaCW-Regular.woff2": "/cowrywise/static/media/BRFirmaCW-Regular.0bc23865fcc59ad582ea.woff2",
     "static/media/logo.svg": "/cowrywise/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/cowrywise/index.html",
-    "main.20121d0a.css.map": "/cowrywise/static/css/main.20121d0a.css.map",
-    "main.d30be642.js.map": "/cowrywise/static/js/main.d30be642.js.map",
+    "main.29eb5265.css.map": "/cowrywise/static/css/main.29eb5265.css.map",
+    "main.be9eaf43.js.map": "/cowrywise/static/js/main.be9eaf43.js.map",
     "787.29363c83.chunk.js.map": "/cowrywise/static/js/787.29363c83.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.20121d0a.css",
-    "static/js/main.d30be642.js"
+    "static/css/main.29eb5265.css",
+    "static/js/main.be9eaf43.js"
   ]
 }
